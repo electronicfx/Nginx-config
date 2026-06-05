@@ -5,17 +5,17 @@ Port 80 TCP / 443 TCP + UDP
     sudo apt install certbot python3-certbot-nginx
 
 ## Nginx.conf
-[http3](https://github.com/electronicfx/nginx/blob/main/HTTP3-nginx.conf)  
+[http3](https://github.com/electronicfx/Nginx-config/blob/main/HTTP3-nginx.conf)  
 
 
 ## Zertifikat für Doamin erstellen
     sudo apt install certbot python3-certbot-nginx
 > certbot: sudo certbot --nginx -d example.dyndns.org  
-> [acme.sh](https://github.com/electronicfx/nginx/blob/main/acme.sh-DNS.md)  
+> [acme.sh](https://github.com/electronicfx/Nginx-config/blob/main/acme.sh-DNS.md)  
 
 $~~~$
 
-## [Edit Nginx sites Configuration](https://github.com/electronicfx/nginx/blob/main/sites-available/http3_web-server.conf) 
+## [Edit Nginx sites Configuration](https://github.com/electronicfx/Nginx-config/blob/main/sites-available/http3_web-server.conf) 
     sudo nano /etc/nginx/sites-available/example.dyndns.org  #  edit with real domaine
 
 ```nginx
@@ -193,8 +193,8 @@ $~~~~~$
 ## rtmp
 ### Nginx Config  
 
-[nginx.conf](https://github.com/electronicfx/nginx/blob/main/HTTP3-nginx.conf)
-[rtmp.conf](https://github.com/electronicfx/nginx/blob/main/rtmp.conf)
+[nginx.conf](https://github.com/electronicfx/Nginx-config/blob/main/HTTP3-nginx.conf)
+[rtmp.conf](https://github.com/electronicfx/Nginx-config/blob/main/rtmp.conf)
 
 
 ### OBS setting  
