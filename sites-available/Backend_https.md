@@ -26,7 +26,7 @@ verify = 2 + CAfile → Aktiviert mTLS (optional).
 ```
 
 ## Generate new Certs   
-### [script](https://github.com/electronicfx/scripts/blob/main/createCerts.sh)  
+
 ```
 openssl genrsa -out ca.key 4096  
 openssl req -x509 -new -nodes -key ca.key -sha256 -days 3650 -out ca.crt  
