@@ -26,7 +26,7 @@ cd /etc/nginx/client_certs
 CA_PATH="/etc/nginx/clientcert"
 EXPORT_PATH="/mnt/smb"
 DAYS_VALID=730
-WEBHOOK_URL="https://discord.com/api/webhooks/1416513806867107871/LtnXx4thQqHtbSVCkBeXl-Kme2kqkp_sezVGhPfsXNIBsJnQ_HB_TMIDGM18qnWReceA"
+WEBHOOK_URL="https://discord.com/api/webhooks/.."
 FILENAME="readyou_$(date +%Y%m%d)" # Fügt Datum zum Dateinamen hinzu
 
 # Passwort für die .p12 Datei (Sollte mit dem in ReadYou übereinstimmen)
