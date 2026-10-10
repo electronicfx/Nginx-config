@@ -5,7 +5,7 @@ Port 80 TCP / 443 TCP + UDP
     sudo apt install certbot python3-certbot-nginx
 
 ## Nginx.conf
-[http3](https://github.com/electronicfx/Nginx-config/blob/main/HTTP3-nginx.conf)  
+[v3](https://github.com/electronicfx/Nginx-config/blob/main/nginx.conf)  
 
 
 ## Zertifikat für Doamin erstellen
