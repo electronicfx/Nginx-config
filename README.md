@@ -15,7 +15,7 @@ Port 80 TCP / 443 TCP + UDP
 
 $~~~$
 
-## [Edit Nginx sites Configuration](https://github.com/electronicfx/Nginx-config/blob/main/sites-available/http3_web-server.conf) 
+## Edit Nginx sites Configuration
     sudo nano /etc/nginx/sites-available/example.dyndns.org  #  edit with real domaine
 
 ```nginx
@@ -193,7 +193,6 @@ $~~~~~$
 ## rtmp
 ### Nginx Config  
 
-[nginx.conf](https://github.com/electronicfx/Nginx-config/blob/main/HTTP3-nginx.conf)
 [rtmp.conf](https://github.com/electronicfx/Nginx-config/blob/main/rtmp.conf)
 
 
