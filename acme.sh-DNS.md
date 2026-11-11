@@ -17,12 +17,12 @@
 
 
 ## Fordere ein Zertifikat an
-    ./acme.sh --issue --dns dns_ipv64 -d example.com
+    ./acme.sh --issue --dns dns_ipv64 -d my-domian.xyz
 
 
   *Für ein Wildcard-Zertifikat:*
 
-    ./acme.sh --issue --dns dns_ipv64 -d example.com -d *.example.com
+    ./acme.sh --issue --dns dns_ipv64 -d my.my-domian.xyz -d *.my-domian.xyz
 
 
 
@@ -34,15 +34,15 @@
 
 ## Zertifikat Insatllieren
 ```
-~/.acme.sh/acme.sh --install-cert -d deine-domain.com \
-  --key-file       /var/lib/acme/<deine-domain>.key \
-  --fullchain-file /var/lib/acme/<deine-domain>.crt \
+~/.acme.sh/acme.sh --install-cert -d my-domian.xyz \
+  --key-file       /etc/nginx/ssl/acme/<my-domian.xyz>.key \
+  --fullchain-file /etc/nginx/ssl/acme/<my-domian.xyz>_fullchain.cer \
   --reloadcmd      "sudo systemctl reload nginx"
 ```
 
 ### Manuelles erneuern
     ~/.acme.sh/acme.sh --list  
-    ~/.acme.sh/acme.sh --renew -d <deine-domain> --force  
+    ~/.acme.sh/acme.sh --renew -d <my-domian.xyz> --force  
     certbot renew 
 
 
@@ -52,10 +52,10 @@
 ```
 server {
     listen 443 ssl;
-    server_name deine-domain.com www.deine-domain.com;
+    server_name my-domian.xyz;
 
-    ssl_certificate     /var/lib/acme/<deine-domain>.crt;
-    ssl_certificate_key /var/lib/acme/<deine-domain>.key;
+    ssl_certificate     /etc/nginx/ssl/acme/<my-domian.xyz>_fullchian.cer;
+    ssl_certificate_key /etc/nginx/ssl/acme/<my-domian.xyz>.key;
 ```
 
     sudo nginx -t
@@ -67,6 +67,6 @@ server {
 ## Zertifikat prüfen
 
 > sudo certbot certificates  
-> openssl x509 -in /etc/letsencrypt/live/example.com/fullchain.pem -text -noout | grep -A2 "Validity"  
+> openssl x509 -in /etc/letsencrypt/live/my-domian.xyz/fullchain.pem -text -noout | grep -A2 "Validity"  
 
 
